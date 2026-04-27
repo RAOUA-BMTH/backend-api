@@ -34,10 +34,10 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Build Docker image
-        run: sudo docker build -t raouamth/backend-session16:latest .
+        run: docker build -t raouamth/backend-session16:latest .
 
       - name: Push Docker image
-        run: sudo docker push raouamth/backend-session16:latest
+        run: docker push raouamth/backend-session16:latest
 
 
   deploy:
